@@ -1,22 +1,22 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
+  <div>
+    <vs-row class="text-center">
       
-      <v-col cols="12">
-        <v-img
+      <vs-col cols="12">
+        <img
           :src="require('../assets/logo.svg')"
           class="my-3"
           contain
           height="200"
         />
-      </v-col>
+      </vs-col>
       <Draggable>
-      <v-col class="mb-4">
+      <vs-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome to Vuetify
         </h1>
 
-        <v-icon>fa-anchor</v-icon>
+        <i class="fas fa-address-card"></i>
 
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
@@ -26,10 +26,10 @@
             target="_blank"
           >Discord Community</a>
         </p>
-      </v-col>
+      </vs-col>
       </Draggable>
 
-      <v-col
+      <vs-col
         class="mb-5"
         cols="12"
       >
@@ -37,7 +37,7 @@
           What's next?
         </h2>
 
-        <v-row justify="center">
+        <vs-row justify="center">
           <a
             v-for="(next, i) in whatsNext"
             :key="i"
@@ -47,10 +47,10 @@
           >
             {{ next.text }}
           </a>
-        </v-row>
-      </v-col>
+        </vs-row>
+      </vs-col>
 
-      <v-col
+      <vs-col
         class="mb-5"
         cols="12"
       >
@@ -58,7 +58,7 @@
           Important Links
         </h2>
 
-        <v-row justify="center">
+        <vs-row justify="center">
           <a
             v-for="(link, i) in importantLinks"
             :key="i"
@@ -68,10 +68,10 @@
           >
             {{ link.text }}
           </a>
-        </v-row>
-      </v-col>
+        </vs-row>
+      </vs-col>
 
-      <v-col
+      <vs-col
         class="mb-5"
         cols="12"
       >
@@ -79,7 +79,7 @@
           Ecosystem
         </h2>
 
-        <v-row justify="center">
+        <vs-row justify="center">
           <a
             v-for="(eco, i) in ecosystem"
             :key="i"
@@ -89,10 +89,10 @@
           >
             {{ eco.text }}
           </a>
-        </v-row>
-      </v-col>
-    </v-row>
-  </v-container>
+        </vs-row>
+      </vs-col>
+    </vs-row>
+  </div>
 </template>
 
 <script>

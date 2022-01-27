@@ -1,6 +1,6 @@
 <template>
   <div id="background-container">
-        <v-img
+        <img
           :src="require('../assets/background.jpg')"
           id="background-img"
         />
@@ -26,8 +26,9 @@
     position: absolute;
     left: 0;
     top: 0;
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
+    object-fit: cover;
 }
 
 #background-img::after {

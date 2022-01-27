@@ -1,15 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import vuetify from './plugins/vuetify'
 import { DraggablePlugin } from '@braks/revue-draggable';
+import Vuesax from 'vuesax';
 
-Vue.config.productionTip = false
+import 'vuesax/dist/base.css' 
+import 'vuesax/dist/vuesax.css' 
+
 Vue.use(DraggablePlugin)
+Vue.use(Vuesax, {
+  // options here
+})
 
 new Vue({
   router,
-  vuetify,
   render: h => h(App)
 }).$mount('#app')
 
